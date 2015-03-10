@@ -1,9 +1,79 @@
 <!doctype HTML>
-<head>
-<link rel='stylesheet' href='style.css'/>
-</head>
+   <head>
+     <meta charset='UTF-8'>
+	 <meta name='viewport' content="width=device-width;initial-scale=1.0">
+     <link rel='stylesheet' href='css/mainStyle.css'/>
+	 <!--<script src='libs/angular/angular.min.js'></script>-->
+	 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.1.js"></script>
+	 <script src='app.js'></script>
+	 
+	  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+   </head>
 
-<body>
-<img alt="robot image" src="robot.jpg" class="responsive"/>
-</body>
+    <body ng-app='angularApp' ng-controller="mainCtrl">
+       <!--<img alt="robot image" src="robot.jpg" class="responsive"/>-->
+      <div class='bannerHeader'>
+       <header>
+	     <img src='images/mainLogo.jpg'></img>
+		
+	     <h1>
+	        My Web
+	     </h1>
+	
+       </header>
+	   </div>
+     
+	 <div id="headerTabs">
+	    <tabset class='tabset' type='tabs'>
+         <tab active heading='Home'>Home</tab>
+         <tab active heading='About Us'>About My Web</tab>
+		  <tab heading ='Web Technology'>Tutorials</tab>
+         <tab heading='Contact Us'>Contact Us</tab>
+		 <tab heading='Career'>Career</tab>
+         <span class="dropdown" dropdown on-toggle="toggled(open)">
+      <a href class="dropdown-toggle" dropdown-toggle>
+        Click me for a dropdown, yo!
+      </a>
+      <ul class="dropdown-menu">
+        <li ng-repeat="choice in items">
+          <a href>{{choice}}</a>
+        </li>
+      </ul>
+    </span>
+       </tabset>
+     </div>
+   
+	     <section id='mainContent'>
+		
+		 <div class='carouselDiv'>
+        <div>  
+          
+		  <carousel interval="myInterval">
+            <slide ng-repeat="slide in slides" active="slide.active">
+             <img ng-src="{{slide.image}}" style="margin:auto;">
+             <div class="carousel-caption">
+                <h4>Slide {{$index}}</h4>
+                <p>{{slide.text}}</p>
+             </div>
+            </slide>
+          </carousel>
+        </div>
+		 </div>
+		 <div class="container">
+		     <div class="row">
+		 <div id='tutorialLinks'>
+		 <div class='col-lg-3 col-sm-2 col-xs-1'><img src='images/html_logo.png'></img></div>
+		 <div class='col-lg-3 col-sm-2 col-xs-1'><img src='images/javascript.jpg'></img></div>
+		 <div class='col-lg-3 col-sm-2 col-xs-1'><img src='images/css-html-logo.jpg'></img></div>
+		 <div class='col-lg-3 col-sm-2 col-xs-1'><img src='images/jquery.jpg'></img></div>
+		 <div class='col-lg-3 col-sm-2 col-xs-1'><img src='images/AngularJS-large.png'></img></div>
+		 <div class='col-lg-3 col-sm-2 col-xs-1'><img src='images/boostrap.jpg'></img></div>
+		 </div>
+		 </div>
+		 </div>
+	   </section>
+	   <footer>
+	   </footer>
+    </body>
 </HTML>

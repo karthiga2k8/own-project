@@ -1,0 +1,76 @@
+.bannerHeader{
+/*	position:relative;*/
+position: absolute; background: #ffffff; 
+padding-left: 15px;
+
+padding-top: 0px; 
+width: 100%; 
+height:20%;	
+background-color: black;
+
+
+}
+
+.bannerHeader h1{
+    background-color: black;
+	color:white;
+	padding-left:50px;
+	padding-top:10px;
+	font-family:Impact, Charcoal, sans-serif;
+}
+
+.bannerHeader img{
+float:left;
+ height:50px; 
+ width:50px;
+
+}
+.tabset{
+position :absolute;
+top:8%;
+left:50%;
+
+
+}
+#headerTabs div li.active a {
+  background-color: #999999;
+}
+
+#headerTabs div li a {
+  background-color: #191919;
+}
+#headerTabs div li a :hover{
+  background-color: #999999; !important
+}
+#mainContent{
+
+position :absolute;
+top:20%;
+width:100%;
+height:100%;
+
+}
+.carouselDiv{
+position:relative;
+
+height:2%;
+width:100%;	
+margin-top:50px
+}
+#tutorialLinks{
+margin-top:30%;
+width:inherit;
+height:30%;
+}
+#tutorialLinks div {
+    width : 20% !important;
+
+	height: 20% !important;
+	margin:5%;
+	
+}
+#tutorialLinks div img{
+    width : 100% !important;
+
+	height: 100% !important;
+}
