@@ -1,0 +1,42 @@
+<!doctype html>
+<head>
+	<title></title>
+	<style type="text/css">
+        .container {
+  width: 100%;
+  height:auto;
+  border: 2px solid red;
+  display:inline-block;
+}
+section,
+aside {
+  margin: 1.858736059%;
+  border: 2px solid green;
+}
+@media all and (max-width: 420px) {
+  section, aside {
+    float: none;
+    width: auto;
+  }
+}
+@media all and (min-width: 421px) {
+section {
+  float: left;
+  width: 60.197026%; 
+}
+aside {
+  float: right;
+  width: 29.3680297%;
+}
+}
+
+
+	</style>
+</head>
+<body>
+  <div class="container">
+  <section>section</section>
+  <aside>Aside</aside>
+</div>
+</body>
+</html>
